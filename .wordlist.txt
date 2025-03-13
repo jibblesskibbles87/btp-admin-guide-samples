@@ -63,6 +63,8 @@ Terraform's
 Terramate
 tf
 TLS
+TODO
+todo
 toml
 TOML
 toolchain

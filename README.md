@@ -2,13 +2,13 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
 -->
 
-# SAP BTP - Adminsitrator's Guide Samples
+# SAP BTP - Administrator's Guide Samples
 
 ## Description
 
-This repository provides tangible samples based on the good practises and examples given in the [SAP BTP Administrator's Guide](https://help.sap.com/docs/btp/btp-admin-guide/btp-admin-guide) on [help.sap.com](https://help.sap.com/docs/).
+This repository provides tangible samples based on the good practices and examples given in the [SAP BTP Administrator's Guide](https://help.sap.com/docs/btp/btp-admin-guide/btp-admin-guide) on [help.sap.com](https://help.sap.com/docs/).
 
-The provided samples show the implementation of the guidelines using Infratructure as Code namely [Terraform](https://www.terraform.io/)/[OpenTofu](https://opentofu.org/). This should support in getting started with a sustainable setup of your SAP BTP accounts following our recommendations.
+The provided samples show the implementation of the guidelines using Infrastructure as Code namely [Terraform](https://www.terraform.io/)/[OpenTofu](https://opentofu.org/). This should support in getting started with a sustainable setup of your SAP BTP accounts following our recommendations.
 
 ## Content Structure
 
