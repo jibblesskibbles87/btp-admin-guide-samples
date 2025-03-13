@@ -63,6 +63,8 @@ Terraform's
 Terramate
 tf
 TLS
+toml
+TOML
 toolchain
 UIs
 UI
