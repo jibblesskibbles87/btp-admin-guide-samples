@@ -16,11 +16,11 @@ TODO
 
 ## How to obtain support
 
-❓ - If you have a *question* you can ask it here in [GitHub Discussions](https://github.com/SAP/btp-admin-guide-samples/discussions/) or in the [SAP Community](https://answers.sap.com/questions/ask.html).
+❓ - If you have a *question* you can ask it here in [GitHub Discussions](https://github.com/SAP-samples/btp-admin-guide-samples/discussions/) or in the [SAP Community](https://answers.sap.com/questions/ask.html).
 
-🐞 - If you find a bug, feel free to create a [bug report](https://github.com/SAP/btp-admin-guide-samples/issues/new?assignees=&labels=bug%2Cneeds-triage&projects=&template=bug_report.yml&title=%5BBUG%5D).
+🐞 - If you find a bug, feel free to create a [bug report](https://github.com/SAP-samples/btp-admin-guide-samples/issues/new?assignees=&labels=bug%2Cneeds-triage&projects=&template=bug_report.yml&title=%5BBUG%5D).
 
-💡 - If you have an idea for improvement or a feature request, please open a [feature request](https://github.com/SAP/btp-admin-guide-samples/issues/new?assignees=&labels=enhancement%2Cneeds-triage&projects=&template=feature_request.yml&title=%5BFEATURE%5D).
+💡 - If you have an idea for improvement or a feature request, please open a [feature request](https://github.com/SAP-samples/btp-admin-guide-samples/issues/new?assignees=&labels=enhancement%2Cneeds-triage&projects=&template=feature_request.yml&title=%5BFEATURE%5D).
 
 
 ## Contributing
