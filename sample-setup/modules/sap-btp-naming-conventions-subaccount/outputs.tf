@@ -1,18 +1,3 @@
-output "directory_name" {
-  value       = local.directory_name
-  description = "Name of the directory"
-}
-
-output "directory_description" {
-  value       = local.directory_description
-  description = "Description of the directory"
-}
-
-output "directory_labels" {
-  value       = local.directory_labels
-  description = "Labels for the directory"
-}
-
 output "subaccount_name" {
   value       = local.subaccount_name
   description = "Name of the subaccount"

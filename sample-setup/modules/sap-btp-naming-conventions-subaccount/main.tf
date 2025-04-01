@@ -5,29 +5,11 @@ locals {
   # The length limit for the subdomain is 63 characters.
   subdomain_length_limit        = 63
   costcenter_label_name         = "Costcenter"
-  directory_contact_label_name  = "Directory responsibles"
   subaccount_contact_label_name = "Subaccount responsibles"
   stage_label_name              = "Stage"
   managedby_label_name          = "Managed by"
 
-  directory_name = var.region == null ? var.business_unit : format(
-    "%s%s%s",
-    upper(var.business_unit),
-    var.delimiter,
-    var.region
-  )
-
-  directory_description = var.region == null ? format(
-    "Directory for business Unit %s",
-    var.business_unit
-    ) : format(
-    "Directory for business Unit %s (%s)",
-    var.business_unit,
-    var.region
-  )
-
   costcenter_label_name_formatted         = var.label_name_case == "lower" ? lower(local.costcenter_label_name) : var.label_name_case == "title" ? title(local.costcenter_label_name) : upper(local.costcenter_label_name)
-  directory_contact_label_name_formatted  = var.label_name_case == "lower" ? lower(local.directory_contact_label_name) : var.label_name_case == "title" ? title(local.directory_contact_label_name) : upper(local.directory_contact_label_name)
   subaccount_contact_label_name_formatted = var.label_name_case == "lower" ? lower(local.subaccount_contact_label_name) : var.label_name_case == "title" ? title(local.subaccount_contact_label_name) : upper(local.subaccount_contact_label_name)
   stage_label_name_formatted              = var.label_name_case == "lower" ? lower(local.stage_label_name) : var.label_name_case == "title" ? title(local.stage_label_name) : upper(local.stage_label_name)
   managedby_label_name_formatted          = var.label_name_case == "lower" ? lower(local.managedby_label_name) : var.label_name_case == "title" ? title(local.managedby_label_name) : upper(local.managedby_label_name)
@@ -47,13 +29,6 @@ locals {
       "${local.managedby_label_name_formatted}" = [local.management_label_value_formatted]
     }
   ) : local.basic_labels
-
-  directory_labels = merge(
-    local.basic_labels_final,
-    {
-      "${local.directory_contact_label_name_formatted}" = var.directory_contacts
-    }
-  )
 
   subaccount_name = format(
     "%s%s%s",
@@ -103,7 +78,7 @@ locals {
     }
   )
 
-  subaccount_usage = var.stage == "Prod" ? "USED_FOR_PRODUCTIO" : "NOT_USED_FOR_PRODUCTIO"
+  subaccount_usage = var.stage == "Prod" ? "USED_FOR_PRODUCTION" : "NOT_USED_FOR_PRODUCTION"
 
   cloudfoundry_org_name = local.subaccount_subdomain
 }

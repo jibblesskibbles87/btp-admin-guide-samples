@@ -3,21 +3,6 @@ variable "business_unit" {
   description = "Business unit of the project e.g., HR, IT or Sales"
 }
 
-variable "region" {
-  type        = string
-  default     = null
-  description = <<-EOT
-    The geographical region for a directory. The parameter is optional
-    If you set it the possible values are: `EMEA`, `APAC`, `AMER`.
-    Default value: `null`.
-  EOT
-
-  validation {
-    condition     = var.region == null ? true : contains(["EMEA", "APAC", "AMER"], var.region)
-    error_message = "Allowed values are: `EMEA`, `APAC`, `AMER`."
-  }
-}
-
 variable "stage" {
   type        = string
   description = <<-EOT
@@ -37,18 +22,12 @@ variable "company_name" {
     Company name to be used for subaccount subdomains. The parameter is optional
     Default value: `null`.
   EOT
-
   default = null
 }
 
 variable "costcenter" {
   type        = string
   description = "Cost center to be used for subaccounts"
-}
-
-variable "directory_contacts" {
-  type        = list(string)
-  description = "Contact persons to be used for directories, added as label"
 }
 
 variable "subaccount_contacts" {
