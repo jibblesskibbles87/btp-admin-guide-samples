@@ -8,9 +8,23 @@ variable "business_unit" {
   description = "Business unit of the project e.g., HR, IT or Sales"
 }
 
+variable "region" {
+  type        = string
+  default     = null
+  description = <<-EOT
+    The geographical region for a directory. The parameter is optional
+    If you set it the possible values are: `EMEA`, `APAC`, `AMER`.
+    Default value: `null`.
+  EOT
+}
+
 variable "subaccount_region" {
   type        = string
   description = "Region of the subaccount."
+  validation {
+    condition     = lookup(local.valid_region_combination, var.subaccount_region, "INVALID") == var.region
+    error_message = "Please provide a fitting subaccount region for the region"
+  }
 }
 
 variable "costcenter" {

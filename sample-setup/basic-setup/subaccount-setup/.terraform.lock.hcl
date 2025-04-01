@@ -1,0 +1,44 @@
+# This file is maintained automatically by "terraform init".
+# Manual edits may be lost in future updates.
+
+provider "registry.terraform.io/hashicorp/random" {
+  version = "3.7.1"
+  hashes = [
+    "h1:t152MY0tQH4a8fLzTtEWx70ITd3azVOrFDn/pQblbto=",
+    "zh:3193b89b43bf5805493e290374cdda5132578de6535f8009547c8b5d7a351585",
+    "zh:3218320de4be943e5812ed3de995946056db86eb8d03aa3f074e0c7316599bef",
+    "zh:419861805a37fa443e7d63b69fb3279926ccf98a79d256c422d5d82f0f387d1d",
+    "zh:4df9bd9d839b8fc11a3b8098a604b9b46e2235eb65ef15f4432bde0e175f9ca6",
+    "zh:5814be3f9c9cc39d2955d6f083bae793050d75c572e70ca11ccceb5517ced6b1",
+    "zh:63c6548a06de1231c8ee5570e42ca09c4b3db336578ded39b938f2156f06dd2e",
+    "zh:697e434c6bdee0502cc3deb098263b8dcd63948e8a96d61722811628dce2eba1",
+    "zh:78d5eefdd9e494defcb3c68d282b8f96630502cac21d1ea161f53cfe9bb483b3",
+    "zh:a0b8e44927e6327852bbfdc9d408d802569367f1e22a95bcdd7181b1c3b07601",
+    "zh:b7d3af018683ef22794eea9c218bc72d7c35a2b3ede9233b69653b3c782ee436",
+    "zh:d63b911d618a6fe446c65bfc21e793a7663e934b2fef833d42d3ccd38dd8d68d",
+    "zh:fa985cd0b11e6d651f47cff3055f0a9fd085ec190b6dbe99bf5448174434cdea",
+  ]
+}
+
+provider "registry.terraform.io/sap/btp" {
+  version     = "1.11.0"
+  constraints = "~> 1.11.0"
+  hashes = [
+    "h1:q9XDheshVlSVbcWKmAlOjF+EGTxvpgS+CyMOyPzh3uw=",
+    "zh:16647cac2e5062c4ac9db89d622b1de3375e57372841f65f3e6997a26a2f283d",
+    "zh:548d023762dbd3c2830a151f0beadf58401a70368299625f4c90100997348aed",
+    "zh:55aba6fba636e2d6524f4b180fb1ff0df6328dd3812682726a0b9972c921dbdf",
+    "zh:624fb982f4cfb2c26b1448e6270b6ad891592e4e52a00718781579fb5a079adb",
+    "zh:6319aa5b8c60c3916eff4142ecf6f297a8baf1bc903c98a29b6c248a3984f488",
+    "zh:7979a475dd06d12255269fe6ec004d1c460bb64869a9d814bec58bec88b65147",
+    "zh:967b5d6b71053e19dbb017319b8b8bd84d8c7f7cfba6fbb4b23243ce860c370e",
+    "zh:97b02bc0cd9d74bbf4b89b4f8cd9508f0eec7b772b88704f70b696c425a5165e",
+    "zh:a398f2697184f49cb5e32a6c7b3f586a8a723a2d533a4cc13e11d8739fabf6b2",
+    "zh:b9e0a0a986cf8a790c10d469f61c81e9cfc41f4a188f060fb1c5a7612101a4da",
+    "zh:d03b1276c08f7b9d5da9d89505d1a71c0f806142ef336f26abd85a144a68b895",
+    "zh:dd6e32cf30f53707fec2acb1e5c69c044a76349706785bfcdee8fbaa6bb053c6",
+    "zh:e7afd57c00ba45a6be5005620e44db08eec2e6adb97b0af1ffb57963767f8229",
+    "zh:f29dc297897b96bf39f4b6737e6b9e2b8339c3ddc362fc5466ce901d84ef8cb9",
+    "zh:f6057496ac45093be445ed8423dc9dfcdbb21e5cc6d6348dbe3a8d5641882f3f",
+  ]
+}
