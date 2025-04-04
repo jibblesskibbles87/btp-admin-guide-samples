@@ -32,10 +32,10 @@ locals {
 
   subaccount_name = format(
     "%s%s%s",
-    upper(var.business_unit),
+    lower(var.business_unit),
     var.delimiter,
-  var.stage)
-
+    lower(var.stage)
+  )
 
   subaccount_subdomain_base = var.company_name == null ? format(
     "%s%s%s",
