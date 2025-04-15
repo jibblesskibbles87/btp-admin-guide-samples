@@ -65,6 +65,12 @@ variable "custom_indentity_provider" {
   description = "Custom IdP to be used for subaccount"
 }
 
+variable "additional_entitlements" {
+  type        = map(list(string))
+  description = "Entitlements to be provided in addition to the standard entitlements"
+  default     = {}
+}
+
 variable "provision_cf_environment" {
   type        = bool
   description = "Provision Cloud Foundry environment in subaccount"

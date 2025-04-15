@@ -47,6 +47,28 @@ resource "btp_subaccount_trust_configuration" "custom_idp" {
   available_for_user_logon = true
 }
 
+module "subaccount_default_entitlements" {
+  source = "../../modules/sap-btp-subaccount-default-entitlements"
+
+  stage = var.stage
+}
+
+locals {
+  finalized_entitlements = var.additional_entitlements == {} ? module.subaccount_default_entitlements.default_entitlements_for_stage : merge(
+    module.subaccount_default_entitlements.default_entitlements_for_stage,
+    var.additional_entitlements
+  )
+}
+
+module "sap_btp_entitlements" {
+
+  source  = "aydin-ozcan/sap-btp-entitlements/btp"
+  version = "~> 1.0.1"
+
+  subaccount   = btp_subaccount.self.id
+  entitlements = local.finalized_entitlements
+}
+
 module "cf_environment" {
   source = "../../modules/sap-btp-environment/CloudFoundry"
 

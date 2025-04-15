@@ -5,3 +5,4 @@
 - Validation of Geo Region and Subaccount region
 - Default Setup of custom IdP
 - Provision CF env (optional)
+- Execute default plus à la carte entitlements

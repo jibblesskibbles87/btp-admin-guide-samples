@@ -80,5 +80,5 @@ locals {
 
   subaccount_usage = var.stage == "Prod" ? "USED_FOR_PRODUCTION" : "NOT_USED_FOR_PRODUCTION"
 
-  cloudfoundry_org_name = local.subaccount_subdomain
+  cloudfoundry_org_name = substr(local.subaccount_subdomain, 0, 32)
 }

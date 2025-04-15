@@ -22,7 +22,7 @@ variable "company_name" {
     Company name to be used for subaccount subdomains. The parameter is optional
     Default value: `null`.
   EOT
-  default = null
+  default     = null
 }
 
 variable "costcenter" {

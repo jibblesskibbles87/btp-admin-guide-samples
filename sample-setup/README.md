@@ -2,27 +2,16 @@
 
 ## Paradigms
 
-We follow the paradigms of a simpel and clear Terraform configuration as laid out in the [Simple, Clear, Maintainable](https://rosesecurity.dev/blog/2024/11/24/terraform-proverbs) blog post of the [Development Log](https://rosesecurity.dev/) namely:
+We follow the paradigms of a simpel and clear Terraform configuration as laid out in the [Simple, Clear, Maintainable](https://rosesecurity.dev/blog/2024/11/24/terraform-proverbs) blog post of the [Development Log](https://rosesecurity.dev/) especially:
 
 - Clear is better than clever.
-- Version everything.
 - Modules should be reusable, not rigid.
-- State is a liability; manage it wisely.
-- Every apply should be predictable.
 - Outputs are for sharing.
-- Tags are free; use them liberally.
-- Understanding count versus for_each is essential.
+- Labels are free; use them liberally.
 - Descriptions are for users.
 - Use positive variable names to avoid double negatives.
-- Null is not the same as nothing.
-- Prefer a single object over many related variables.
-- Terraform is declarative; trust it to converge.
-- Never output secrets.
-- Upgrade deliberately, not impulsively.
 - Name with underscores, not dashes.
 - Using locals makes code descriptive and maintainable.
-
-These paradigms will be reflected in the code samples provided in this repository and we encourage you to follow them in your own Terraform code.
 
 ## Naming Conventions and Tagging
 
