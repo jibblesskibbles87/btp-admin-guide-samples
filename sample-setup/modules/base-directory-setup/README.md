@@ -1,3 +1,7 @@
+# SAP BTP - Directory Setup
+
+This module encapsulates the creation of a directory on SAP BTP following standardized naming conventions.
+
 ## Requirements
 
 | Name | Version |

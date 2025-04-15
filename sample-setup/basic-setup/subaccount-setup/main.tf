@@ -18,6 +18,7 @@ locals {
   }
 }
 
+data "btp_globalaccount" "this" {}
 
 module "subaccount_namings" {
   source              = "../../modules/sap-btp-naming-conventions-subaccount"
@@ -35,4 +36,23 @@ resource "btp_subaccount" "self" {
   description = module.subaccount_namings.subaccount_description
   usage       = module.subaccount_namings.subaccount_usage
   labels      = module.subaccount_namings.subaccount_labels
+}
+
+resource "btp_subaccount_trust_configuration" "custom_idp" {
+  subaccount_id            = btp_subaccount.self.id
+  identity_provider        = var.custom_indentity_provider
+  name                     = "default-corp-custom-idp"
+  description              = "Default Custom IdP of Corporate"
+  auto_create_shadow_users = true
+  available_for_user_logon = true
+}
+
+module "cf_environment" {
+  source = "../../modules/sap-btp-environment/CloudFoundry"
+
+  count = var.provision_cf_environment ? 1 : 0
+
+  subaccount_id = btp_subaccount.self.id
+  instance_name = module.subaccount_namings.cloudfoundry_org_name
+  cf_org_name   = module.subaccount_namings.cloudfoundry_org_name
 }

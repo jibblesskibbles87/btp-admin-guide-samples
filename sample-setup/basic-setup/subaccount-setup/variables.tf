@@ -59,3 +59,14 @@ variable "parent_id" {
   description = "ID of the parent directory"
   default     = null
 }
+
+variable "custom_indentity_provider" {
+  type        = string
+  description = "Custom IdP to be used for subaccount"
+}
+
+variable "provision_cf_environment" {
+  type        = bool
+  description = "Provision Cloud Foundry environment in subaccount"
+  default     = true
+}

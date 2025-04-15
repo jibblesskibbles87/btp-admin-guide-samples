@@ -1,4 +1,4 @@
-# SAP BTP - Naming module
+# SAP BTP - Naming Conventions for a Subaccount
 
 This module encapsulates the naming conventions for SAP BTP subaccounts and the labels that can be attached to some resources on SAP BTP.
 
