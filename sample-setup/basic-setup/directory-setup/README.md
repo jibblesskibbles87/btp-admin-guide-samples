@@ -5,18 +5,21 @@
 - We assume that we use the directories as structuring element for the subaccounts i.e., un an unmanaged fashion.
 - We assume that we do the directory setup in one run for all involved departments.
 
-## Design Decsion
+## Design Decsions
 
-We decouple the directory creation i.e., the setup of the basic structure from the creation of the operational units namely the subaccounts inside of the directory. The changes on directory level are probably a rare sceanrio compared to the subaccounts (depending on their stage) and we therefore want to avoid side effects as well as lengthy state refreshes.
+We decouple the directory creation i.e., the setup of the basic structure from the creation of the operational units namely the subaccounts inside of the directories. The changes on directory level are probably a rare sceanrio compared to changes in the subaccounts additionally depending on their stage. We want to avoid side effects as well as lengthy state refreshes and keep the state of the directories seperate.
 
 ## Directory Setup
 
-We will create directories for the following departments:
+The creation of the directories is steered by a map of objects that define the business data relevant for a directory namely:
 
-- HR
-- Sales
-- Finance
+- business_unit (`string`): The business unit that owns the directory e.g., HR, IT, Finance
+- costcenter (`string`): Cost center of the business unit
+- directory_contacts (`list(string)`): List of email addresses representing the directory contacts
+- region (`string`): The geographical region of the directory e.g., EMEA
 
-In addition we create a directory for shared services.
+This is input data is reflected by the variables defined in the [variables.tf](./variables.tf) file
 
-All directories are located in EMEA.
+The directories are provisioned via the [main.tf](./main.tf) file which delegates to the module [base-directory-setup](../../modules/base-directory-setup/README.md). This module combines the corresponding module containing the naming and labeling conventions for a directory and calls the Terraform resource [btp_directory](https://registry.terraform.io/providers/SAP/btp/latest/docs/resources/directory).
+
+After provisioning the output summarizes the executed setup as given by the [outputs.tf](./outputs.tf) file.
