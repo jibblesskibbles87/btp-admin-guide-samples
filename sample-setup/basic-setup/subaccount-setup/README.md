@@ -2,26 +2,48 @@
 
 ## Assumptions
 
-- We assume that we use the directories as structuring element for the subaccounts i.e., un an unmanaged fashion.
-- We assume that we do the directory setup in one run for all involved departments.
+- We assume a bsaic setup of a subaccount is executed by the platform team/ SAP BTP administrator team
+- We assume that the responsibility of the platform team is restricted to a basic setup of a subacount leaving out app subscriptions and service instance creation.
 
 ## Design Decsions
 
-We decouple the directory creation i.e., the setup of the basic structure from the creation of the operational units namely the subaccounts inside of the directory. The changes on directory level are probably a rare sceanrio compared to the subaccounts (depending on their stage) and we therefore want to avoid side effects as well as lengthy state refreshes.
+To keep the Terraform state files clearly seperated the setup is done per subaccount i.e. per stage.
 
 ## Subaccount Setup
 
-- Basic setup of a subaccount. Every subaccount is created seperately
-- Naming Conventions and Labels
-- Validation of Geo Region and Subaccount region
-- Default Setup of custom IdP
-- Provision CF env (optional)
-- Execute default plus à la carte entitlements
+The setup of the subaccount comprises:
+
+- The setup of a subaccount in accordance to the naming conventions and labeling startegy of the company
+- The trust configuration to a custom IdP is configured by default.
+- Default entitlements are added depending on the stage. In addition the requesting team can add additional project specific entitlements ("à la carte entitlements")
+- Optionally a Cloud Foundry Environment is created
+
+### Naming Conventions and Labels
+
+The naming conventions and labels are centralized in the module [sap-btp-naming-conventions-subaccount](../../modules/sap-btp-naming-conventions-subaccount/README.md). The names and labels are drived based on input variables defined in the [variables.tf](./variables.tf) file.
 
 ### Validations for Geographies and BTP Regions
 
-### Trust Configuration for Custom IdP
+According to the SAP BTP Administrators Guide one part of the naming is the geographical region. To ensure that this region fits to the subaccount region, a validation is implemented in the [variables.tf](./variables.tf) file. The validation checks if the region of the subaccount is part of the geographical region. The geographical regions are defined in a local variable sdefined in the [main.tf](main.tf) file.
 
 ### Setup of Entitlements
 
+The setup of entitlements is split into two parts:
+
+- The default entitlements that are defined per stage and sourced from the module [](../../modules/sap-btp-subaccount-default-entitlements/README.md)
+- Optional additional entitlements that might be needed due to project specific requirements. These entitlements are defined in the [variables.tf](./variables.tf) file
+
+The configuration merges the two files and adds the entitlements to the subaccount.
+
 ### Setup of Cloud Foundry Environment
+
+The setup of a Cloud Foundry environment is optional. The caller can decide if a Cloud Foundry environment is required or not e.g. when setting up a shared subaccount. The boolean variable is `provision_cf_environment` in the [variables.tf](./variables.tf) file.
+
+
+### Output
+
+The output defined in the [outputs.tf](./outputs.tf) file returns the main information relevant for the development team namely:
+
+- a link to the subaccount
+- The ID of the Cloud Foundry org
+- The API endpoint of the Cloud Foundry environment
