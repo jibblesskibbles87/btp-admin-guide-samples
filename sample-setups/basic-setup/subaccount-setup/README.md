@@ -35,6 +35,8 @@ The setup of entitlements is split into two parts:
 
 The configuration merges the two files and adds the entitlements to the subaccount.
 
+To ease the provisioning of entitlements we use the Terraform community module [SAP BTP Entitlements Management with Terraform Module: sap-btp-entitlements](https://registry.terraform.io/modules/aydin-ozcan/sap-btp-entitlements/btp/latest).
+
 ### Setup of Cloud Foundry Environment
 
 The setup of a Cloud Foundry environment is optional. The caller can decide if a Cloud Foundry environment is required or not e.g. when setting up a shared subaccount. The boolean variable is `provision_cf_environment` in the [variables.tf](./variables.tf) file.
@@ -47,3 +49,12 @@ The output defined in the [outputs.tf](./outputs.tf) file returns the main infor
 - a link to the subaccount
 - The ID of the Cloud Foundry org
 - The API endpoint of the Cloud Foundry environment
+
+
+
+## SAP BTP Administrator's Guide - References
+
+- [Setting Up Your Account Model](https://help.sap.com/docs/btp/btp-admin-guide/setting-up-your-account-model)
+- [Naming and Directory Templates](https://help.sap.com/docs/btp/btp-admin-guide/naming-directory-templates)
+- [Setting Up Authentication](https://help.sap.com/docs/btp/btp-admin-guide/setting-up-authentication)
+- [Cloud Foundry, Kyma, or Both?](https://help.sap.com/docs/btp/btp-admin-guide/cloudfoundry-kyma-or-both)
