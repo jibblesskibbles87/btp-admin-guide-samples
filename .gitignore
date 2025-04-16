@@ -36,4 +36,13 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+# Ignore typical plan output files
+*.tfplan
+*.out
+*.plan
+
+.DS_Store
+
 *.env
+
+playground/**
