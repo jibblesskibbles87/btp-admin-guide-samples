@@ -2,7 +2,7 @@
 
 ## Paradigms
 
-We follow the paradigms of a simpel and clear Terraform configuration as laid out in the [Simple, Clear, Maintainable](https://rosesecurity.dev/blog/2024/11/24/terraform-proverbs) blog post of the [Development Log](https://rosesecurity.dev/) especially:
+We follow the paradigms of a simple and clear Terraform configuration as laid out in the [Simple, Clear, Maintainable](https://rosesecurity.dev/blog/2024/11/24/terraform-proverbs) blog post of the [Development Log](https://rosesecurity.dev/) especially:
 
 - Clear is better than clever.
 - Modules should be reusable, not rigid.
@@ -15,9 +15,9 @@ We follow the paradigms of a simpel and clear Terraform configuration as laid ou
 
 ## Naming Conventions and Tagging
 
-Ensuring naming conventions is one import aspect when provisioing and managing your SAP BTP account. We will align our samples in accordance to the [Naming Conventions for SAP BTP Accounts](https://help.sap.com/docs/btp/btp-admin-guide/naming-conventions-for-sap-btp-accounts).
+Ensuring naming conventions is one import aspect when provisioning and managing your SAP BTP account. We will align our samples in accordance to the [Naming Conventions for SAP BTP Accounts](https://help.sap.com/docs/btp/btp-admin-guide/naming-conventions-for-sap-btp-accounts).
 
-To ensure consistent naming of your resources, we encapsulate the guidlines in dedicated module. Besides the naming we will also include the labels that can be attached to some resources on SAP BTP.
+To ensure consistent naming of your resources, we encapsulate the guidelines in dedicated module. Besides the naming we will also include the labels that can be attached to some resources on SAP BTP.
 
 We have created one module for the level of the [directory](./modules/sap-btp-naming-conventions-directory/README.md) and one for the level of the [subaccount](./modules/sap-btp-naming-conventions-subaccount/README.md).
 

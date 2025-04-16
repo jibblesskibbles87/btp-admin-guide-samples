@@ -1,6 +1,6 @@
 # SAP BTP - Environment Setup
 
-This module encapsulates the creation of a Cloud Foundry environment in a subaccounton SAP BTP.
+This module encapsulates the creation of a Cloud Foundry environment in a subaccount on SAP BTP.
 
 ## Requirements
 

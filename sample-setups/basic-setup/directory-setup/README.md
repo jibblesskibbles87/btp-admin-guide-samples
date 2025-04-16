@@ -2,12 +2,12 @@
 
 ## Assumptions
 
-- We assume that we use the directories as structuring element for the subaccounts i.e., un an unmanaged fashion.
+- We assume that we use the directories as structuring element for the subaccounts i.e., in an unmanaged fashion.
 - We assume that we do the directory setup in one run for all involved departments.
 
 ## Design Decisions
 
-We decouple the directory creation i.e., the setup of the basic structure from the creation of the operational units namely the subaccounts inside of the directories. The changes on directory level are probably a rare sceanrio compared to changes in the subaccounts additionally depending on their stage. We want to avoid side effects as well as lengthy state refreshes and keep the state of the directories seperate.
+We decouple the directory creation i.e., the setup of the basic structure from the creation of the operational units namely the subaccounts inside of the directories. The changes on directory level are probably a rare scenario compared to changes in the subaccounts additionally depending on their stage. We want to avoid side effects as well as lengthy state refreshes and keep the state of the directories separate.
 
 ## Directory Setup
 

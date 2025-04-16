@@ -2,29 +2,29 @@
 
 ## Assumptions
 
-- We assume a bsaic setup of a subaccount is executed by the platform team/ SAP BTP administrator team
-- We assume that the responsibility of the platform team is restricted to a basic setup of a subacount leaving out app subscriptions and service instance creation.
+- We assume a basic setup of a subaccount is executed by the platform team/ SAP BTP administrator team
+- We assume that the responsibility of the platform team is restricted to a basic setup of a subaccount leaving out app subscriptions and service instance creation.
 
-## Design Decsions
+## Design Decisions
 
-To keep the Terraform state files clearly seperated the setup is done per subaccount i.e. per stage.
+To keep the Terraform state files clearly separated the setup is done per subaccount i.e. per stage.
 
 ## Subaccount Setup
 
 The setup of the subaccount comprises:
 
-- The setup of a subaccount in accordance to the naming conventions and labeling startegy of the company
+- The setup of a subaccount in accordance to the naming conventions and labeling strategy of the company
 - The trust configuration to a custom IdP is configured by default.
 - Default entitlements are added depending on the stage. In addition the requesting team can add additional project specific entitlements ("à la carte entitlements")
 - Optionally a Cloud Foundry Environment is created
 
 ### Naming Conventions and Labels
 
-The naming conventions and labels are centralized in the module [sap-btp-naming-conventions-subaccount](../../modules/sap-btp-naming-conventions-subaccount/README.md). The names and labels are drived based on input variables defined in the [variables.tf](./variables.tf) file.
+The naming conventions and labels are centralized in the module [sap-btp-naming-conventions-subaccount](../../modules/sap-btp-naming-conventions-subaccount/README.md). The names and labels are derived based on input variables defined in the [variables.tf](./variables.tf) file.
 
 ### Validations for Geographies and BTP Regions
 
-According to the SAP BTP Administrators Guide one part of the naming is the geographical region. To ensure that this region fits to the subaccount region, a validation is implemented in the [variables.tf](./variables.tf) file. The validation checks if the region of the subaccount is part of the geographical region. The geographical regions are defined in a local variable sdefined in the [main.tf](main.tf) file.
+According to the SAP BTP Administrators Guide one part of the naming is the geographical region. To ensure that this region fits to the subaccount region, a validation is implemented in the [variables.tf](./variables.tf) file. The validation checks if the region of the subaccount is part of the geographical region. The geographical regions are defined in a local variables defined in the [main.tf](main.tf) file.
 
 ### Setup of Entitlements
 
