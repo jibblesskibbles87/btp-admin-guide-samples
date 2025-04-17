@@ -12,3 +12,13 @@ output "cf_org_id" {
   value       = var.provision_cf_environment ? module.cf_environment[0].cf_org_id : "No Cloud Foundry environment was requested to be provisioned"
   description = "The Cloud Foundry org ID"
 }
+
+output "kyma_dashboard_url" {
+  value       = var.provision_kyma_environment ? module.kyma_environment[0].kyma_dashboard_url : "No Kyma environment was requested to be provisioned"
+  description = "The URL to the Kyma dashboard"
+}
+
+output "kyma_kubeconfig_url" {
+  value       = var.provision_kyma_environment ? module.kyma_environment[0].kyma_kubeconfig_url : "No Kyma environment was requested to be provisioned"
+  description = "The URL to the Kubeconfig file for the Kyma runtime"
+}

@@ -76,3 +76,20 @@ variable "provision_cf_environment" {
   description = "Provision Cloud Foundry environment in subaccount"
   default     = true
 }
+
+variable "provision_kyma_environment" {
+  type        = bool
+  description = "Provision Kyma environment in subaccount"
+  default     = false
+}
+
+variable "kyma_administrators" {
+  description = "Users to be assigned as administrators for the Kyma environment."
+  type        = list(string)
+  default     = null
+
+  validation {
+    condition     = var.provision_kyma_environment ? length(var.kyma_administrators) > 0 : true
+    error_message = "Kyma administrators must be provided if a Kyma environment is provisioned"
+  }
+}

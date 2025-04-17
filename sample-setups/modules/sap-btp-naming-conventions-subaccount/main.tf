@@ -80,5 +80,15 @@ locals {
 
   subaccount_usage = var.stage == "Prod" ? "USED_FOR_PRODUCTION" : "NOT_USED_FOR_PRODUCTION"
 
-  cloudfoundry_org_name = substr(local.subaccount_subdomain, 0, 32)
+  cloudfoundry_org_name = local.subaccount_name
+
+  // We assume that one Kyma instance is created for Dev and Test
+  kyma_stage = var.stage == "Dev" ? "Dev-Test" : var.stage == "Test" ? "Dev-Test" : var.stage == "Prod" ? "Prod" : "Shared"
+
+  kyma_instance_name = format(
+    "%s%s%s",
+    lower(var.business_unit),
+    var.delimiter,
+    lower(local.kyma_stage)
+  )
 }

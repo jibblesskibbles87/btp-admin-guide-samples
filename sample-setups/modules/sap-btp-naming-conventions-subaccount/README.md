@@ -44,6 +44,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_cloudfoundry_org_name"></a> [cloudfoundry\_org\_name](#output\_cloudfoundry\_org\_name) | Name of the Cloud Foundry org |
+| <a name="output_kyma_instance_name"></a> [kyma\_instance\_name](#output\_kyma\_instance\_name) | Name of the Kyma instance |
 | <a name="output_subaccount_description"></a> [subaccount\_description](#output\_subaccount\_description) | Description of the subaccount |
 | <a name="output_subaccount_labels"></a> [subaccount\_labels](#output\_subaccount\_labels) | Labels for the subaccount |
 | <a name="output_subaccount_name"></a> [subaccount\_name](#output\_subaccount\_name) | Name of the subaccount |
