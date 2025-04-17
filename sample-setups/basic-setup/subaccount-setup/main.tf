@@ -70,11 +70,21 @@ module "sap_btp_entitlements" {
 }
 
 module "cf_environment" {
-  source = "../../modules/sap-btp-environment/CloudFoundry"
+  source = "../../modules/sap-btp-environment/cloudfoundry"
 
   count = var.provision_cf_environment ? 1 : 0
 
   subaccount_id = btp_subaccount.self.id
   instance_name = module.subaccount_namings.cloudfoundry_org_name
   cf_org_name   = module.subaccount_namings.cloudfoundry_org_name
+}
+
+module "kyma_environment" {
+  source = "../../modules/sap-btp-environment/kyma"
+
+  count = var.provision_kyma_environment ? 1 : 0
+
+  subaccount_id       = btp_subaccount.self.id
+  instance_name       = module.subaccount_namings.kyma_instance_name
+  kyma_administrators = var.kyma_administrators
 }

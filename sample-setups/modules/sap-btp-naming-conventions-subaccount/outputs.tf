@@ -27,3 +27,8 @@ output "cloudfoundry_org_name" {
   value       = local.cloudfoundry_org_name
   description = "Name of the Cloud Foundry org"
 }
+
+output "kyma_instance_name" {
+  value       = local.kyma_instance_name
+  description = "Name of the Kyma instance"
+}
