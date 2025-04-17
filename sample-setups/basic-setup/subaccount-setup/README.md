@@ -47,7 +47,7 @@ The configuration of the setup is done in the corresponding module [`sap-btp-env
 
 The setup of a Kyma environment is optional. The caller can decide if a Kyma environment is required or not e.g. when setting up a shared subaccount. The boolean variable is `provision_kyma_environment` in the [variables.tf](./variables.tf) file.
 
-If the Kyma environemnt is requested, the variable `kyma_administrators` in the [variables.tf](./variables.tf) file must be filled with the users that should be assigned as administrators. This condition is validated
+If the Kyma environment is requested, the variable `kyma_administrators` in the [variables.tf](./variables.tf) file must be filled with the users that should be assigned as administrators. This condition is validated
 
 The configuration of the setup is done in the corresponding module [`sap-btp-environment/kyma`](../../modules/sap-btp-environment/kyma/README.md).
 

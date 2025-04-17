@@ -1,6 +1,6 @@
 # SAP BTP - Kyma Environment Setup
 
-This module encapsulates the creation of a Kyma environment in a subaccount on SAP BTP. The configuration is a basic setup. In a real world scenario, you would likely want to customize the setuo further with resoect to the available parameters like machine type etc. as described in the [documentation](https://help.sap.com/docs/btp/sap-business-technology-platform/provisioning-and-update-parameters-in-kyma-environment) depending on the stage of the environment (development, test, production).
+This module encapsulates the creation of a Kyma environment in a subaccount on SAP BTP. The configuration is a basic setup. In a real world scenario, you would likely want to customize the setup further with respect to the available parameters like machine type etc. as described in the [documentation](https://help.sap.com/docs/btp/sap-business-technology-platform/provisioning-and-update-parameters-in-kyma-environment) depending on the stage of the environment (development, test, production).
 
 ## Requirements
 
