@@ -1,5 +1,5 @@
 name: 🐞 Bug report
-description: File a bug/issue to help us improve
+description: Report a bug or documentation issue to help us improve
 title: "[BUG]"
 labels: [bug, needs-triage]
 body:
@@ -8,45 +8,45 @@ body:
       label: Is there an existing issue for this?
       description: Please search to see if an issue already exists for the bug you encountered.
       options:
-        - label: I have searched the existing issues
+        - label: I have searched the existing issues.
           required: true
   - type: dropdown
     id: area
     attributes:
-      label: What type of issue are you facing
-      description: What type of issue are you facing?
+      label: Issue Type
+      description: Choose the type of issue you'd like to report.
       options:
-        - bug report
-        - documentation issue
+        - Bug Report
+        - Documentation Issue
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Describe the bug
-      description: Provide a clear and concise description of what the bug is.
+      label: Descripton
+      description: Provide a clear and concise description of the problem. Describe where it appears, when it occurred, and what it affects.
     validations:
       required: true
   - type: textarea
     attributes:
       label: Expected Behavior
-      description: A concise description of what you expected to happen.
+      description: Describe what you expect to happen.
     validations:
       required: false
   - type: textarea
     attributes:
-      label: Add screenshots to help explain your problem
+      label: Screenshots
       description: |
-        If applicable, add screenshots to help explain your problem.
+        Optionally, add screenshots to help explain your problem.
 
-        Tip: You can attach images or files by clicking this area to highlight it and then dragging files in.
+        Tip: To attach images or files, click this area to highlight it and then drag files in.
     validations:
       required: false
   - type: textarea
     attributes:
-      label: Additional context
+      label: Additional Context
       description: |
-        Add any other context like links or references about the problem here. Anything that will give us more context about the issue you are encountering!
+        Add any other context, like links or references about the problem. Anything that gives us more context about the issue you are encountering.
 
-        Tip: You can attach images or files by clicking this area to highlight it and then dragging files in.
+        Tip: To attach images or files, click this area to highlight it and then drag files in.
     validations:
       required: false
