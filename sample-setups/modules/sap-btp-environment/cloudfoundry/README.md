@@ -1,6 +1,6 @@
-# SAP BTP - Cloud Foundry Environment Setup
+# SAP BTP - Cloud Foundry Runtime Setup
 
-This module encapsulates the creation of a Cloud Foundry environment in a subaccount on SAP BTP.
+This module encapsulates the creation of a Cloud Foundry runtime in a subaccount on SAP BTP.
 
 ## Requirements
 
@@ -33,9 +33,9 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cf_org_name"></a> [cf\_org\_name](#input\_cf\_org\_name) | Name of the Cloud Foundry org. | `string` | n/a | yes |
-| <a name="input_instance_name"></a> [instance\_name](#input\_instance\_name) | Name of the Cloud Foundry environment instance. | `string` | n/a | yes |
-| <a name="input_plan_name"></a> [plan\_name](#input\_plan\_name) | Desired service plan for the Cloud Foundry environment instance. | `string` | `"standard"` | no |
-| <a name="input_subaccount_id"></a> [subaccount\_id](#input\_subaccount\_id) | ID of the subaccount where the Cloud Foundry environment will be created. | `string` | n/a | yes |
+| <a name="input_instance_name"></a> [instance\_name](#input\_instance\_name) | Name of the Cloud Foundry runtime instance. | `string` | n/a | yes |
+| <a name="input_plan_name"></a> [plan\_name](#input\_plan\_name) | Desired service plan for the Cloud Foundry runtime instance. | `string` | `"standard"` | no |
+| <a name="input_subaccount_id"></a> [subaccount\_id](#input\_subaccount\_id) | ID of the subaccount where the Cloud Foundry runtime is created. | `string` | n/a | yes |
 
 ## Outputs
 
