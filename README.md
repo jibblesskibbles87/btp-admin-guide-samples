@@ -6,26 +6,25 @@
 
 ## Description
 
-This repository provides tangible samples based on the good practices and examples given in the [SAP BTP Administrator's Guide](https://help.sap.com/docs/btp/btp-admin-guide/btp-admin-guide) on [help.sap.com](https://help.sap.com/docs/).
+This repository provides samples based on the recommendations given in the [SAP BTP Administrator's Guide](https://help.sap.com/docs/btp/btp-admin-guide/btp-admin-guide) on [help.sap.com](https://help.sap.com/docs/).
 
-The provided samples show the implementation of the guidelines using Infrastructure as Code namely [Terraform](https://www.terraform.io/)/[OpenTofu](https://opentofu.org/). This should support in getting started with a sustainable setup of your SAP BTP accounts following our recommendations.
+These samples show the implementation of the recommendations using Infrastructure as Code, namely [Terraform](https://www.terraform.io/) or [OpenTofu](https://opentofu.org/). They help you getting started with a sustainable setup of your SAP BTP accounts following our best practices.
 
 ## Content Structure
 
 TODO
 
-## How to obtain support
+## Getting Support
 
-❓ - If you have a *question* you can ask it here in [GitHub Discussions](https://github.com/SAP-samples/btp-admin-guide-samples/discussions/).
+❓ - If you have a *question*, ask it in [GitHub Discussions](https://github.com/SAP-samples/btp-admin-guide-samples/discussions/).
 
-🐞 - If you find a bug, feel free to create a [bug report](https://github.com/SAP-samples/btp-admin-guide-samples/issues/new?assignees=&labels=bug%2Cneeds-triage&projects=&template=bug_report.yml&title=%5BBUG%5D).
+🐞 - If you find a bug, please create a [bug report](https://github.com/SAP-samples/btp-admin-guide-samples/issues/new?assignees=&labels=bug%2Cneeds-triage&projects=&template=bug_report.yml&title=%5BBUG%5D).
 
-💡 - If you have an idea for improvement or a feature request, please open a [feature request](https://github.com/SAP-samples/btp-admin-guide-samples/issues/new?assignees=&labels=enhancement%2Cneeds-triage&projects=&template=feature_request.yml&title=%5BFEATURE%5D).
-
+💡 - If you have an idea for improvement or a feature request, feel free to open a [feature request](https://github.com/SAP-samples/btp-admin-guide-samples/issues/new?assignees=&labels=enhancement%2Cneeds-triage&projects=&template=feature_request.yml&title=%5BFEATURE%5D).
 
 ## Contributing
 
-If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
+If you'd like to contribute code, fixes, or improvements, please create a pull request. Due to legal reasons, contributors must accept a DCO. When you create your first pull request to this project, you are automatically asked to accept the DCO. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
 
 ## Code of Conduct
 
