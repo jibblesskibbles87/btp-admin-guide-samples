@@ -10,7 +10,7 @@ output "directory_name" {
 
 output "business_unit" {
   value       = var.business_unit
-  description = "Business unit of the project e.g., HR, IT or Sales"
+  description = "Business unit of the project, such as HR, IT, or Sales"
 }
 
 output "costcenter" {

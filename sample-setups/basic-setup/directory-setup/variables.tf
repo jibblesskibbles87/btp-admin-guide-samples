@@ -12,7 +12,7 @@ variable "directory_inputs" {
   }))
   description = <<-EOT
     The inputs for the directory module.
-    - `business_unit`: Business unit of the project e.g., HR, IT or Sales
+    - `business_unit`: Business unit of the project, such as HR, IT, or Sales
     - `costcenter`: Cost center to be used for subaccounts
     - `directory_contacts`: Contact persons to be used for directories, added as label
     - `region`: The geographical region for a directory. The parameter is optional

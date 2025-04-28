@@ -1,6 +1,6 @@
 variable "business_unit" {
   type        = string
-  description = "Business unit of the project e.g., HR, IT or Sales"
+  description = "Business unit of the project, such as HR, IT, or Sales"
 }
 
 variable "region" {
@@ -20,5 +20,5 @@ variable "costcenter" {
 
 variable "directory_contacts" {
   type        = list(string)
-  description = "Contact persons to be used for directory, added as label"
+  description = "Contact persons to be used for the directory, added as label"
 }
