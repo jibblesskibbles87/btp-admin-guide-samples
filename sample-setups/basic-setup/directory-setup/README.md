@@ -24,9 +24,7 @@ The directories are provisioned with the [main.tf](./main.tf) file, which delega
 
 After provisioning the output, it summarizes the executed setup as given by the [outputs.tf](./outputs.tf) file. See the following example how the output could look like:
 
-<!-- screenshots are disencouraged because they're harder to keep up to date ![Sample Output for a directory](../../../assets/base-directory-output.png) -->
-
-```json
+```bash
 Outputs:
 
 directories = {
