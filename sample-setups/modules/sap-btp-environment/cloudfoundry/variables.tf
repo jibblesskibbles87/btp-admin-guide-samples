@@ -5,7 +5,7 @@ variable "subaccount_id" {
 
 variable "instance_name" {
   type        = string
-  description = "Name of the Cloud Foundry environment instance."
+  description = "Name of the Cloud Foundry runtime instance."
 
   validation {
     condition     = can(regex("^[a-zA-Z0-9_\\-\\.]{1,32}$", var.instance_name))
@@ -15,7 +15,7 @@ variable "instance_name" {
 
 variable "plan_name" {
   type        = string
-  description = "Desired service plan for the Cloud Foundry environment instance."
+  description = "Desired service plan for the Cloud Foundry runtime instance."
   default     = "standard"
 }
 

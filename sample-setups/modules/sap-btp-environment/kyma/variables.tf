@@ -1,11 +1,11 @@
 variable "subaccount_id" {
   type        = string
-  description = "ID of the subaccount where the Cloud Foundry environment will be created."
+  description = "ID of the subaccount where the Kyma runtime is created."
 }
 
 variable "instance_name" {
   type        = string
-  description = "Name of the Kyma environment instance."
+  description = "Name of the Kyma runtime instance."
 
   validation {
     condition     = can(regex("^[a-zA-Z0-9_\\-\\.]{1,32}$", var.instance_name))
@@ -16,7 +16,7 @@ variable "instance_name" {
 variable "plan_name" {
   type        = string
   description = <<-EOT
-     Desired service plan for the Kyma environment instance.
+     Desired service plan for the Kyma runtime instance.
      If not provided it will be set to the default value of the region.
      EOT
   default     = null
@@ -31,7 +31,7 @@ variable "kyma_administrators" {
 variable "oidc" {
   description = "Custom OpenID Connect IdP configuration to authenticate users in your Kyma runtime."
   type = object({
-    # the URL of the OpenID issuer (use the https schema)
+    # the URL of the OpenID issuer (use the HTTPS schema)
     issuer_url = string
 
     # the client ID for the OpenID client

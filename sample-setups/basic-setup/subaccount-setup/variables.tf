@@ -5,7 +5,7 @@ variable "globalaccount" {
 
 variable "business_unit" {
   type        = string
-  description = "Business unit of the project e.g., HR, IT or Sales"
+  description = "Business unit of the project, such as HR, IT, or Sales"
 }
 
 variable "region" {
