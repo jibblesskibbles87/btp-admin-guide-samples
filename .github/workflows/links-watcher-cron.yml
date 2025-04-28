@@ -38,7 +38,7 @@ jobs:
         if: failure()
         with:
           title: Link Checker Report
-          # If issue number is empty a new issue gets created
+          # If issue number is empty, a new issue is created
           issue-number: ${{ steps.find_issue.outputs.issue-number }}
           content-filepath: ./lychee/out.md
           labels: broken link, automated issue

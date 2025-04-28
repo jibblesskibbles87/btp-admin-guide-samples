@@ -31,16 +31,16 @@ This module encapsulates the creation of a directory on SAP BTP following standa
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_business_unit"></a> [business\_unit](#input\_business\_unit) | Business unit of the project e.g., HR, IT or Sales | `string` | n/a | yes |
+| <a name="input_business_unit"></a> [business\_unit](#input\_business\_unit) | Business unit of the project, such as HR, IT, or Sales | `string` | n/a | yes |
 | <a name="input_costcenter"></a> [costcenter](#input\_costcenter) | Cost center to be used for subaccounts | `string` | n/a | yes |
-| <a name="input_directory_contacts"></a> [directory\_contacts](#input\_directory\_contacts) | Contact persons to be used for directory, added as label | `list(string)` | n/a | yes |
-| <a name="input_region"></a> [region](#input\_region) | The geographical region for a directory. The parameter is optional<br/>If you set it the possible values are: `EMEA`, `APAC`, `AMER`.<br/>Default value: `null`. | `string` | `null` | no |
+| <a name="input_directory_contacts"></a> [directory\_contacts](#input\_directory\_contacts) | Contact persons to be used for the directory, added as label | `list(string)` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | The geographical region for a directory. The parameter is optional<br/>If you set it, the possible values are: `EMEA`, `APAC`, `AMER`.<br/>Default value: `null`. | `string` | `null` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_business_unit"></a> [business\_unit](#output\_business\_unit) | Business unit of the project e.g., HR, IT or Sales |
+| <a name="output_business_unit"></a> [business\_unit](#output\_business\_unit) | Business unit of the project, such as HR, IT, or Sales |
 | <a name="output_costcenter"></a> [costcenter](#output\_costcenter) | Cost center to be used for subaccounts |
 | <a name="output_directory_id"></a> [directory\_id](#output\_directory\_id) | Technical ID of the directory |
 | <a name="output_directory_name"></a> [directory\_name](#output\_directory\_name) | The name of the directory |

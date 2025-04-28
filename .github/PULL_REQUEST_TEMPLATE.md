@@ -1,16 +1,16 @@
 ## Purpose
-<!-- Describe the intention of the changes being proposed. What problem does it solve or functionality does it add? -->
+<!-- Describe the purpose of the change you are proposing. What problem does it solve or functionality does it add? -->
 - ...
 
 ## Pull Request Type
 
-What kind of change does this Pull Request introduce?
-<!-- Please check the one that applies to this PR using "X". -->
+What kind of change does this pull request introduce?
+<!-- To check the type that applies to this PR, add an "X". -->
 ```
 [ ] Bugfix
 [ ] Feature
-[ ] Refactoring (no functional changes, no api changes)
-[ ] Documentation content changes
+[ ] Refactoring (no functional changes, no API changes)
+[ ] Documentation improvement
 [ ] Other... Please describe:
 ```
 

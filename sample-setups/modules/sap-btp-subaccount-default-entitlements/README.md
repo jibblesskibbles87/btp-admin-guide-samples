@@ -1,6 +1,6 @@
 # SAP BTP - Default Subaccount Entitlements
 
-This module encapsulates the default entitlements for SAP BTP subaccounts. It distinguishes between the different stages of the environment (Dev, Test, Prod, Shared) and provides a default set of entitlements for each stage.
+This module encapsulates the default entitlements for SAP BTP subaccounts. It distinguishes between the different development stages of the environment (Dev, Test, Prod, Shared) and provides a default set of entitlements for each stage.
 
 ## Requirements
 
