@@ -13,7 +13,7 @@ We follow the paradigms of a simple and clear Terraform configuration as laid ou
 - Name with underscores, not dashes.
 - Using locals makes code descriptive and maintainable.
 
-Another important paradigm is avoiding a monolithic Terraform state (*"Terralith"*). Hence, there is no single Terraform configuration for a complete SAP BTP account. Instead, we split the setup in configurations that are provisioned and managed seperately.
+Another important paradigm is avoiding a monolithic Terraform state (*"Terralith"*). Hence, there is no single Terraform configuration for a complete SAP BTP account. Instead, we split the setup in configurations that are provisioned and managed separately.
 
 ## Overview
 
@@ -50,4 +50,4 @@ The module [base-directory-setup](./modules/base-directory-setup/README.md) is u
 The reusable parts of the subaccount setup are:
 
 - The module [SAP BTP - Default Subaccount Entitlements](./modules/sap-btp-subaccount-default-entitlements/README.md) encapsulates the default entitlements for SAP BTP subaccounts. It distinguishes between the different development stages of the environment (Dev, Test, Prod, Shared) and provides the default data of entitlements for each stage. The entitlement is executed in the configuration of the [basic setup of the subaccount](./basic-setup/directory-setup/README.md)
-- The creation of the different SAP BTP environemnts are encapsulated in modules for [Cloud Foundry](./modules/sap-btp-environment/cloudfoundry/README.md) and [Kyma](./modules/sap-btp-environment/kyma/README.md).
+- The creation of the different SAP BTP environments are encapsulated in modules for [Cloud Foundry](./modules/sap-btp-environment/cloudfoundry/README.md) and [Kyma](./modules/sap-btp-environment/kyma/README.md).
