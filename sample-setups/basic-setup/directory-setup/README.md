@@ -1,13 +1,10 @@
 # Sample Setup for a Basic Directory Structure
 
-## Assumptions
-
-- We assume that we use the directories as structuring element for the subaccounts; that is, in an unmanaged fashion.
-- We assume that we do the directory setup in one run for all involved departments.
-
 ## Design Decisions
 
-We decouple the directory creation (the setup of the basic structure) from the creation of the operational units (the subaccounts within the directories). Typically, changes on directory level happen less frequently than changes in the subaccounts additionally depending on their stage. We want to avoid side effects as well as lengthy state refreshes and keep the state of the directories separate.
+- We use the directories as structuring element for the subaccounts; that is, in an unmanaged fashion.
+- We decouple the directory creation (the setup of the basic structure) from the creation of the operational units (the subaccounts within the directories). Typically, changes on directory level happen less frequently than changes in the subaccounts additionally depending on their stage. We want to avoid side effects as well as lengthy state refreshes and keep the state of the directories separate.
+- We do the directory provisioning and management as one unit for all involved departments.
 
 ## Directory Setup
 
@@ -32,7 +29,7 @@ directories = {
     "business_unit" = "HR"
     "costcenter" = "123456"
     "id" = "cf12345f-1234567890"
-    "name" = "Sales-EMEA"
+    "name" = "HR-EMEA"
     "region" = "EMEA"
   }
 }

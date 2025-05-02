@@ -6,7 +6,7 @@
 
 ## Description
 
-This repository provides samples based on the recommendations given in the [SAP BTP Administrator's Guide](https://help.sap.com/docs/btp/btp-admin-guide/btp-admin-guide) on [help.sap.com](https://help.sap.com/docs/).
+This repository provides samples based on the recommendations given in the [SAP BTP Administrator's Guide](https://help.sap.com/docs/btp/btp-admin-guide/btp-admin-guide) specifically the section ["Setting Up Your Account Model"](https://help.sap.com/docs/btp/btp-admin-guide/setting-up-your-account-model).
 
 These samples show the implementation of the recommendations using Infrastructure as Code, namely [Terraform](https://www.terraform.io/) or [OpenTofu](https://opentofu.org/). They help you getting started with a sustainable setup of your SAP BTP accounts following our best practices.
 

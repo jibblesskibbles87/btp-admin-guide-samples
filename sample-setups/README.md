@@ -13,13 +13,13 @@ We follow the paradigms of a simple and clear Terraform configuration as laid ou
 - Name with underscores, not dashes.
 - Using locals makes code descriptive and maintainable.
 
-## Naming Conventions and Labeling
+Another important paradigm is avoiding a monolithic Terraform state (*"Terralith"*). Hence, there is no single Terraform configuration for a complete SAP BTP account. Instead, we split the setup in configurations that are provisioned and managed separately.
 
-Consistent naming conventions are one import aspect when provisioning and managing your SAP BTP account. Our samples follow the [Naming Conventions for SAP BTP Accounts](https://help.sap.com/docs/btp/btp-admin-guide/naming-conventions-for-sap-btp-accounts).
+## Overview
 
-To ensure consistent naming of your resources, we encapsulate the guidelines in a dedicated module. Besides the naming, we also include the labels that can be attached to some resources on SAP BTP.
+The basic setup showcases the setup of directories and subaccounts as given in this overview:
 
-We have created one module for the level of the [directory](./modules/sap-btp-naming-conventions-directory/README.md) and one for the level of the [subaccount](./modules/sap-btp-naming-conventions-subaccount/README.md).
+![Overview Basic Setup](../assets/basic-setup-overview.png)
 
 ## Setup of Directories
 
@@ -28,3 +28,26 @@ The folder `basic-setup/directory-setup` contains the setup of directories as a 
 ## Setup of Subaccounts
 
 The folder `basic-setup/subaccount-setup` contains the setup of subaccounts. For details, see the [README.md](./basic-setup/subaccount-setup/README.md) file.
+
+## Modules
+
+We have created a set of modules to encapsulate the reusable parts of the setup. The modules are located in the folder `modules`. Each module has its own README file that describes the module and its usage.
+
+### Naming Conventions and Labeling
+
+Consistent naming conventions are one import aspect when provisioning and managing your SAP BTP account. Our samples follow the [Naming Conventions for SAP BTP Accounts](https://help.sap.com/docs/btp/btp-admin-guide/naming-conventions-for-sap-btp-accounts).
+
+To ensure consistent naming of your resources, we encapsulate the guidelines in a dedicated module. Besides the naming, we also include the labels that can be attached to some resources on SAP BTP.
+
+We have created one module for the level of the [directory](./modules/sap-btp-naming-conventions-directory/README.md) and one for the level of the [subaccount](./modules/sap-btp-naming-conventions-subaccount/README.md).
+
+### Directory Setup
+
+The module [base-directory-setup](./modules/base-directory-setup/README.md) is used to create the directories. It combines the corresponding module containing the naming and labeling conventions for a directory, and calls the Terraform resource [btp_directory](https://registry.terraform.io/providers/SAP/btp/latest/docs/resources/directory).
+
+### Subaccount Setup
+
+The reusable parts of the subaccount setup are:
+
+- The module [SAP BTP - Default Subaccount Entitlements](./modules/sap-btp-subaccount-default-entitlements/README.md) encapsulates the default entitlements for SAP BTP subaccounts. It distinguishes between the different development stages of the environment (Dev, Test, Prod, Shared) and provides the default data of entitlements for each stage. The entitlement is executed in the configuration of the [basic setup of the subaccount](./basic-setup/directory-setup/README.md)
+- The creation of the different SAP BTP environments are encapsulated in modules for [Cloud Foundry](./modules/sap-btp-environment/cloudfoundry/README.md) and [Kyma](./modules/sap-btp-environment/kyma/README.md).
