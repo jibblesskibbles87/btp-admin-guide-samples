@@ -13,7 +13,7 @@ We follow the paradigms of a simple and clear Terraform configuration as laid ou
 - Name with underscores, not dashes.
 - Using locals makes code descriptive and maintainable.
 
-Another important paradigm is avoiding a monolithic Terraform state (*"Terralith"*). Hence, there is no single Terraform configuration for a complete SAP BTP account. Instead, we split the setup in configurations that are provisioned and managed separately.
+It's important to avoid a monolithic Terraform state (*"Terralith"*). Because of that, we don't provide a single Terraform configuration for a complete SAP BTP account. Instead, we split the setup in configurations that are provisioned and managed separately.
 
 ## Overview
 
@@ -31,7 +31,7 @@ The folder `basic-setup/subaccount-setup` contains the setup of subaccounts. For
 
 ## Modules
 
-We have created a set of modules to encapsulate the reusable parts of the setup. The modules are located in the folder `modules`. Each module has its own README file that describes the module and its usage.
+We have created a set of modules to encapsulate the reusable parts of the setup. You find the modules in the folder modules. Learn about the modules and their usage in their respective `README` files
 
 ### Naming Conventions and Labeling
 
