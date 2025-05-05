@@ -31,7 +31,7 @@ The folder `basic-setup/subaccount-setup` contains the setup of subaccounts. For
 
 ## Modules
 
-We have created a set of modules to encapsulate the reusable parts of the setup. You find the modules in the folder modules. Learn about the modules and their usage in their respective `README` files
+We have created a set of modules to encapsulate the reusable parts of the setup. You find the modules in the folder modules. Learn about the modules and their usage in their respective `README` files.
 
 ### Naming Conventions and Labeling
 
