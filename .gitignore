@@ -46,3 +46,5 @@ terraform.rc
 *.env
 
 playground/**
+
+.terraform.lock.hcl
