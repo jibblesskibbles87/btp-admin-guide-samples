@@ -31,7 +31,7 @@ The folder `basic-setup/subaccount-setup` contains the setup of subaccounts. For
 
 ## Modules
 
-We want to keep our Terraform configuration as simple and concise as possible. To achieve this we encapsulate resusable parts of the setup in [modules](https://developer.hashicorp.com/terraform/language/modules). This allows us to reuse the modules in different setups and to keep the configuration DRY (*Don't repeat yourself*). A benefit of this approach is that we can centrally manage governance topics like naming conventions and labeling strategies for all setups.
+We want to keep our Terraform configuration as simple and concise as possible. To achieve this we encapsulate reusable parts of the setup in [modules](https://developer.hashicorp.com/terraform/language/modules). This allows us to reuse the modules in different setups and to keep the configuration DRY (*Don't repeat yourself*). A benefit of this approach is that we can centrally manage governance topics like naming conventions and labeling strategies for all setups.
 
 You find the modules in the folder "modules". Learn about the modules and their usage in their respective `README` files.
 
