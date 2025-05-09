@@ -11,7 +11,7 @@ These samples show the implementation of the recommendations using Infrastructur
 
 ## Content Structure
 
-The samples are available in the folder `sample-setups`. We provide each sceanrio in a separate folder. Each folder contains a `README.md` file describing the details.
+The samples are available in the folder `sample-setups`. We provide each scenario in a separate folder. Each folder contains a `README.md` file describing the details.
 
 You find further details in the [`READEME.md`](./sample-setups/README.md) file of the `sample-setups` folder and in the `README.md` files of the individual sample setups
 
