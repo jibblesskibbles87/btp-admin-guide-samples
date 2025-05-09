@@ -5,7 +5,7 @@
 We follow the paradigms of a simple and clear Terraform configuration as laid out in [Simple, Clear, Maintainable](https://rosesecurity.dev/2024/11/24/terraform-proverbs.html); especially:
 
 - Clear is better than clever.
-- Modules should be reuseable, not rigid.
+- Modules should be reusable, not rigid.
 - Outputs are for sharing.
 - Labels are free; use them liberally.
 - Descriptions are for users.
@@ -49,7 +49,7 @@ The module [base-directory-setup](./modules/base-directory-setup/README.md) is u
 
 ### Subaccount Setup
 
-The reuseable parts of the subaccount setup are:
+The reusable parts of the subaccount setup are:
 
 - The module [SAP BTP - Default Subaccount Entitlements](./modules/sap-btp-subaccount-default-entitlements/README.md) encapsulates the default entitlements for SAP BTP subaccounts. It distinguishes between the different development stages of the environment (Dev, Test, Prod, Shared) and provides the default data of entitlements for each stage. The entitlement is executed in the configuration of the [basic setup of the subaccount](./basic-setup/directory-setup/README.md)
 - The creation of the different SAP BTP environments are encapsulated in modules for [Cloud Foundry](./modules/sap-btp-environment/cloudfoundry/README.md) and [Kyma](./modules/sap-btp-environment/kyma/README.md).

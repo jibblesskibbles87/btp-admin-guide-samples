@@ -15,7 +15,7 @@ The samples are available in the folder `sample-setups`. We provide each scenari
 
 You find further details in the [`READEME.md`](./sample-setups/README.md) file of the `sample-setups` folder and in the `README.md` files of the individual sample setups
 
-In addition, we have a folder `modules` containing reuseable Terraform modules. These modules are used in the sample setups.
+In addition, we have a folder `modules` containing reusable Terraform modules. These modules are used in the sample setups.
 
 ## Getting Support
 
