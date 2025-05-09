@@ -1,6 +1,5 @@
-<!--- Register repository https://api.reuse.software/register, then add REUSE badge:
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
--->
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/btp-admin-guide-samples)](https://api.reuse.software/info/github.com/SAP-samples/btp-admin-guide-samples)
+[![Periodic Link Checker](https://github.com/SAP-samples/btp-admin-guide-samples/actions/workflows/links-watcher-cron.yml/badge.svg)](https://github.com/SAP-samples/btp-admin-guide-samples/actions/workflows/links-watcher-cron.yml)
 
 # SAP BTP - Administrator's Guide Samples
 
@@ -12,7 +11,11 @@ These samples show the implementation of the recommendations using Infrastructur
 
 ## Content Structure
 
-TODO
+The samples are available in the folder `sample-setups`. We provide each scenario in a separate folder. Each folder contains a `README.md` file describing the details.
+
+You find further details in the [`READEME.md`](./sample-setups/README.md) file of the `sample-setups` folder and in the `README.md` files of the individual sample setups
+
+In addition, we have a folder `modules` containing reusable Terraform modules. These modules are used in the sample setups.
 
 ## Getting Support
 
