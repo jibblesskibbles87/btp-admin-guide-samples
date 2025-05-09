@@ -65,6 +65,7 @@ PowerShell
 powershell
 README
 readme
+reusable
 runtime
 spf
 SSO
