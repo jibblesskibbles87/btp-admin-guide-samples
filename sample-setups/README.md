@@ -2,7 +2,7 @@
 
 ## Paradigms
 
-We follow the paradigms of a simple and clear Terraform configuration as laid out in [Simple, Clear, Maintainable](https://rosesecurity.dev/blog/2024/11/24/terraform-proverbs); especially:
+We follow the paradigms of a simple and clear Terraform configuration as laid out in [Simple, Clear, Maintainable](https://rosesecurity.dev/2024/11/24/terraform-proverbs.html); especially:
 
 - Clear is better than clever.
 - Modules should be reusable, not rigid.
