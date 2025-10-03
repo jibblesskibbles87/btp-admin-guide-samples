@@ -3,11 +3,14 @@
 	"image": "mcr.microsoft.com/devcontainers/base:debian",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/devcontainers/features/terraform:1": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/terraform:1": {
+			"installTerraformDocs": true,
+			"version": "latest",
+			"tflint": "latest"
+		},
     "ghcr.io/robbert229/devcontainer-features/opentofu:1": {
-			"version": "1.9.0"
-		}
+		"version": "1.6.0-alpha3"
+	}
 	},
 	"customizations": {
 		"vscode": {
@@ -33,6 +36,6 @@
 	// - BTP_PASSWORD
 	"runArgs": [
 		"--env-file",
-		".devcontainer/devcontainer.env"
+		".devcontainer/withenvfile/devcontainer.env"
 	]
 }
